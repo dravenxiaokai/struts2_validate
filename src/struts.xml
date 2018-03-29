@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<!-- 定义action后缀 -->
+	<!-- <constant name="struts.action.extension" value="do,action"></constant> -->
+	<!-- 禁止动态方法调用 -->
+	<!-- <constant name="struts.enable.DynamicMethodInvocation" value="false"></constant> -->
+	<package name="person" namespace="/person" extends="struts-default">
+		<action name="manage_*" class="ren.draven.action.PersonAction" method="{1}">
+			<result name="message">/WEB-INF/page/message.jsp</result>
+		</action>
+	</package>
+</struts>
