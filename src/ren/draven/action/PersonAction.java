@@ -35,8 +35,7 @@ public class PersonAction extends ActionSupport {
 		return "message";
 	}
 
-	@Override
-	public void validate() {//会对action中的所有方法进行校验
+	public void validateUpdate() {//会对update()方法进行校验
 		if (this.userName == null || "".equals(this.userName.trim())) {
 			this.addFieldError("userName", "用户名不能为空");
 		} else if (this.mobile == null || "".equals(this.mobile.trim())) {
@@ -46,7 +45,6 @@ public class PersonAction extends ActionSupport {
 				this.addFieldError("mobile", "手机号格式不正确");
 			}
 		}
-		super.validate();
 	}
 
 }
