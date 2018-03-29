@@ -5,7 +5,7 @@ import java.util.regex.Pattern;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
-public class PersonAction extends ActionSupport {
+public class PersonAction2 extends ActionSupport {
 	private String userName;
 	private String mobile;
 
@@ -35,16 +35,5 @@ public class PersonAction extends ActionSupport {
 		return "message";
 	}
 
-	public void validateUpdate() {//会对update()方法进行校验
-		if (this.userName == null || "".equals(this.userName.trim())) {
-			this.addFieldError("userName", "用户名不能为空");
-		} else if (this.mobile == null || "".equals(this.mobile.trim())) {
-			this.addFieldError("mobile", "手机号不能为空");
-		}else {
-			if(!Pattern.compile("^1[358]\\d{9}$").matcher(this.mobile).matches()) {
-				this.addFieldError("mobile", "手机号格式不正确");
-			}
-		}
-	}
 
 }

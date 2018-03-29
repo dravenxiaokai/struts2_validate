@@ -9,8 +9,16 @@
 	<!-- 禁止动态方法调用 -->
 	<!-- <constant name="struts.enable.DynamicMethodInvocation" value="false"></constant> -->
 	<package name="person" namespace="/person" extends="struts-default">
-		<action name="manage_*" class="ren.draven.action.PersonAction" method="{1}">
-		<result name="input">/index.jsp</result>
+		<action name="manage_*" class="ren.draven.action.PersonAction"
+			method="{1}">
+			<result name="input">/index.jsp</result>
+			<result name="message">/WEB-INF/page/message.jsp</result>
+		</action>
+	</package>
+	<package name="validate" namespace="/validate" extends="struts-default">
+		<action name="manage_*" class="ren.draven.action.PersonAction2"
+			method="{1}">
+			<result name="input">/index.jsp</result>
 			<result name="message">/WEB-INF/page/message.jsp</result>
 		</action>
 	</package>
