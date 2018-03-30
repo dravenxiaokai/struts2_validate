@@ -9,7 +9,7 @@
 </head>
 <body>
 <s:fielderror></s:fielderror>
-	<form action="${pageContext.request.contextPath }/validate/manage_update"
+	<form action="${pageContext.request.contextPath }/validate/manage_save"
 		method="post">
 		<label for="userName">用户名：</label><input type="text" name="userName">不能为空<br>
 		<label for="mobile">手机号：</label><input type="text" name="mobile">不能为空，并且符合手机号的格式1,3/5/8,后面是9个数字<br>
