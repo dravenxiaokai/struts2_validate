@@ -1,11 +1,9 @@
 package ren.draven.action;
 
-import java.util.regex.Pattern;
-
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
-public class PersonAction2 extends ActionSupport {
+public class Person2Action extends ActionSupport {
 	private String userName;
 	private String mobile;
 

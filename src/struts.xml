@@ -16,7 +16,7 @@
 		</action>
 	</package>
 	<package name="validate" namespace="/validate" extends="struts-default">
-		<action name="manage_*" class="ren.draven.action.PersonAction2"
+		<action name="manage_*" class="ren.draven.action.Person2Action"
 			method="{1}">
 			<result name="input">/index.jsp</result>
 			<result name="message">/WEB-INF/page/message.jsp</result>
